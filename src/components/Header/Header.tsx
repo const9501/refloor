@@ -22,7 +22,7 @@ const Header = () => {
       <div className={styles.dropdownContainer}>
 
         <span className={styles.dropdownTrigger} onClick={() => setDropdownIsOpen(!dropdownIsOpen)}>
-          Каталог
+          Каталог1
         </span>
 
         <div className={dropdownIsOpen ? styles.dropdownMenu + ' ' + styles.dropdownActive : styles.dropdownMenu + ' ' + styles.dropdownInactive}>
