@@ -1,6 +1,13 @@
 const CACHE_NAME = 'version-1'
 const D_CACHE_NAME = 'd-version-1'
-const urlsToCache = ['index.html', 'offline.html']
+const urlsToCache = [
+	'index.html',
+	'offline.html',
+	'/static/js/main.chunk.js',
+	'/static/js/0.chunk.js',
+	'/static/js/bundle.js',
+	'/'
+]
 
 self.addEventListener('install', async (event) => {
 	const cache = await caches.open(CACHE_NAME)
