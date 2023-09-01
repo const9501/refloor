@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/refloor/static/css/main.4055f5a2.css",
-    "main.js": "/refloor/static/js/main.512d3ec9.js",
+    "main.js": "/refloor/static/js/main.028fdc4a.js",
     "static/media/main-bg.jpg": "/refloor/static/media/main-bg.ca1465b92df99e529381.jpg",
     "index.html": "/refloor/index.html",
     "main.4055f5a2.css.map": "/refloor/static/css/main.4055f5a2.css.map",
-    "main.512d3ec9.js.map": "/refloor/static/js/main.512d3ec9.js.map"
+    "main.028fdc4a.js.map": "/refloor/static/js/main.028fdc4a.js.map"
   },
   "entrypoints": [
     "static/css/main.4055f5a2.css",
-    "static/js/main.512d3ec9.js"
+    "static/js/main.028fdc4a.js"
   ]
 }
