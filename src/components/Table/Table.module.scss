@@ -1,0 +1,52 @@
+.heading {
+  font-size: 30px;
+  color: #3d3d3d;
+  margin-bottom: 30px;
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  row-gap: 40px;
+  column-gap: 10px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.loaderWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 20px;
+
+  .loader {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px dashed #3a3a3a;
+    display: block;
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-bottom: 3px;
+  }
+}
+
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.errorMessage {
+  font-size: 20px;
+}

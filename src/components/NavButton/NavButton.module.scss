@@ -1,0 +1,23 @@
+.button {
+  background-color: #fff;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  color: #3d3d3d;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &:hover {
+    background-color: #f6f6f6;
+    transition: .2s;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
