@@ -1,7 +1,5 @@
 import styles from "./HomePage.module.scss";
 import {useAppSelector} from "../../hook/useAppSelector";
-import Card from "../../components/Card/Card";
-import {Link} from "react-router-dom";
 import Table from "../../components/Table/Table";
 
 

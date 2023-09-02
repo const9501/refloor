@@ -1,6 +1,5 @@
 import {Routes, Route} from "react-router-dom";
 import {useEffect} from "react";
-import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import SectionPage from "./pages/SectionPage/SectionPage";
@@ -23,7 +22,7 @@ const App = () => {
         <Route path='/' element={<Layout/>}>
           <Route index element={<HomePage/>}/>
           <Route path=':section' element={<SectionPage/>}/>
-          <Route path=':section/:element' element={<ElementPage/>}/>
+          <Route path=':section/:id' element={<ElementPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Route>
       </Routes>

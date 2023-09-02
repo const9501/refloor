@@ -2,13 +2,8 @@ import styles from "./Card.module.scss";
 import {useAppSelector} from "../../hook/useAppSelector";
 import {selectElements} from "../../redux/floorSlice";
 import {API_URL} from "../../App";
-import {IElement} from "../../types/types";
+import {ISectionCardProps} from "../../types/types";
 
-interface ISectionCardProps {
-  title?: string
-  variant: 'section' | 'element'
-  element?: IElement
-}
 
 const Card = ({title, variant, element}: ISectionCardProps) => {
 

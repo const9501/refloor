@@ -29,3 +29,15 @@ export interface ISection {
   items: string[]
 }
 
+export interface ITableProps {
+  variant: 'section' | 'element'
+  heading: string | undefined
+  sections?: ISection[]
+  elements?: IElement[]
+}
+
+export interface ISectionCardProps {
+  title?: string
+  variant: 'section' | 'element'
+  element?: IElement
+}

@@ -1,5 +1,5 @@
 import {AnyAction, createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {IData, IElement, IFloorsState} from "../types/types";
+import {IData, IFloorsState} from "../types/types";
 import {API_URL} from "../App";
 
 const initialState: IFloorsState = {
@@ -57,9 +57,10 @@ export const selectElements = (state: IFloorsState, section: string = '') => {
 
 }
 
-export const selectElement = (state: IFloorsState, title: string = '') => {
+export const selectElement = (state: IFloorsState, id: string = '') => {
+
   for (const elem in state.data?.elements) {
-    if (state.data?.elements[elem].title === title) {
+    if (state.data?.elements[elem].id === id) {
       return state.data?.elements[elem]
     }
   }

@@ -2,18 +2,13 @@ import styles from "./Table.module.scss";
 import {Link} from "react-router-dom";
 import Card from "../Card/Card";
 import {useAppSelector} from "../../hook/useAppSelector";
-import {IElement, ISection} from "../../types/types";
+import {ITableProps} from "../../types/types";
 
-interface ITableProps {
-  variant: 'section' | 'element'
-  heading: string | undefined
-  sections?: ISection[]
-  elements?: IElement[]
-}
+
 
 const Table = ({variant, heading, sections, elements}: ITableProps) => {
 
-  const {error, status} = useAppSelector(state => state)
+  const {status} = useAppSelector(state => state)
 
   return (
 
@@ -40,7 +35,7 @@ const Table = ({variant, heading, sections, elements}: ITableProps) => {
                 <Card variant='section' title={section.title}/>
               </Link>
             ) : elements && elements.map(element =>
-            <Link key={element.id} to={element.title}>
+            <Link key={element.id} to={element.id}>
               <Card variant='element' element={element} title={element.title}/>
             </Link>
           )

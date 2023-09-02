@@ -17,6 +17,8 @@
   }
 }
 
+
+
 .catalogWrapper {
   width: 100%;
   max-width: 1000px;
@@ -25,6 +27,24 @@
   float: right;
   margin-top: 50px;
   padding: 40px;
+}
 
+@media (max-width: 900px) {
+  .textBlock {
+    margin-top: 20px;
+
+    .mainHeading {
+      font-size: 30px;
+    }
+
+    .text {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+
+  .catalogWrapper {
+    margin-top: 30px;
+  }
 }
 
