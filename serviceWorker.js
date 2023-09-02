@@ -16,24 +16,13 @@ self.addEventListener('install', async (event) => {
 
 self.addEventListener('active', async (event) => {
 
-	// const cacheNames = await caches.keys()
-	// await Promise.all(
-	// 	cacheNames
-	// 		.filter(name => name !== CACHE_NAME)
-	// 		.filter(name => name !== D_CACHE_NAME)
-	// 		.map(name => caches.delete(name))
-	// )
-
-	// const cacheWhiteList = []
-	// cacheWhiteList.push(CACHE_NAME)
-	// caches.keys()
-	// 	.then(cacheNames => Promise.all(
-	// 		cacheNames.map(cacheName => {
-	// 			if (!cacheWhiteList.includes(cacheName)) {
-	// 				return caches.delete(cacheName)
-	// 			}
-	// 		})
-	// 	))
+	const cacheNames = await caches.keys()
+	await Promise.all(
+		cacheNames
+			.filter(name => name !== CACHE_NAME)
+			.filter(name => name !== D_CACHE_NAME)
+			.map(name => caches.delete(name))
+	)
 })
 
 self.addEventListener('fetch', (event) => {
@@ -47,17 +36,6 @@ self.addEventListener('fetch', (event) => {
 	} else {
 		event.respondWith(networkFirst(request))
 	}
-
-	// console.log('Fetch ', event.request.url);
-
-
-	// event.respondWith(
-	// 	caches.match(event.request)
-	// 		.then(() => {
-	// 			return fetch(event.request)
-	// 				.catch(() => caches.match('offline.html'))
-	// 		})
-	// )
 })
 
 const cacheFirst = async request => {
